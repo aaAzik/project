@@ -1,0 +1,15 @@
+{% extends 'scoop/layouts/base.html' %}
+{% load static %}
+{% block title %}
+Logout page
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+<p id="logoutqo"><br><br><br><br><br><br><br>
+    <center>
+        <h2 style="color:rgb(139, 121, 17) ;">You have successfully logged out of your account.</h2> 
+    <h3 style="color:rgb(139, 121, 17) ;">You can log in <a class="zanovo" href="{% url 'login' %}">again.</a></h3>
+    </center>
+</p>
+{% endblock %}

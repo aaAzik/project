@@ -1,0 +1,34 @@
+.zanovo {
+    text-decoration: none;
+}
+.smooth-transition {
+    transition: all 0.3s ease; /* Smooth transition on all properties for 0.3 seconds */
+}
+
+.smooth-transition:hover {
+    transform: scale(1.1); /* Scale up by 10% on hover */
+}
+
+.azik-smooth {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+ 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+@media (max-width: 768px) {
+    /* CSS стили для маленьких экранов */
+}
+
+
+
+
+

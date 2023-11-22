@@ -1,0 +1,30 @@
+*{ 
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+.contact-submit {
+    padding: 12px 48px;
+    border-radius: 50px; 
+    color: white; 
+    margin-top: 1rem; 
+    cursor: pointer; 
+    outline: none; 
+    border-width: 0; 
+    background-color: #1A1B27; font-weight: 600; 
+    width: 100%; 
+}
+
+.contact-description {
+    text-align: center;
+    padding: 12px 48px;
+    border-radius: 50px;
+    margin-top: 1rem; 
+    color: black; 
+    cursor: pointer; 
+    outline: none; 
+    border-width: 0; 
+    background-color:aliceblue; font-weight: 600; 
+    width: 100%; 
+}

@@ -1,0 +1,45 @@
+{% extends 'scoop/layouts/base.html' %}
+{% load static %}
+{% block title %}
+Main page
+{% endblock %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% block content %}
+<br><br><br>
+<p>
+  <center><h1 style="color:rgb(139, 121, 17) ;"> Welcome to Our Website</h1></center>
+</p>
+<br><br>
+<p>
+  <center>
+    <h1 style="color:rgb(139, 121, 17) ;">
+      Discover a world of possibilities with us.
+       We're here to provide you with the information, products, and services you need.</h1> 
+       <h2 style="color:rgb(139, 121, 17) ;">Explore, learn, and connect with us. 
+      Let's embark on this journey together!
+    </h2>
+  </center>
+</p>
+
+<br><br><br><br><br><br>
+      <center>
+          <a href="https://t.me/aaAzikk">
+            <img class="smooth-transition" src="{% static 'img/tg.png' %}" alt="icon" width="25" height="25">
+          </a>
+          
+          <a class="azik-smooth" href="https://www.instagram.com/uforgoturebeauty">
+            <img class="smooth-transition" src="{% static 'img/ins.png' %}" alt="icon" width="25" height="25">
+          </a>
+      
+          <a href="https://github.com/aaAzik/">
+            <img class="smooth-transition" src="{% static 'img/git.png' %}" alt="icon" width="25" height="25">
+          </a>
+        
+          <a href="https://mail.google.com/mail/urazimbetovazamat44@gmail.com">
+            <img class="smooth-transition" src="{% static 'img/gmail.png' %}" alt="icon" width="25" height="25">
+          </a>
+      </center>
+
+
+{% endblock content %}

@@ -1,0 +1,35 @@
+{% extends 'scoop/layouts/base.html' %}
+
+{% block content %}
+
+<div class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="{{ product.image.url }}" class="w-100" alt="{{ product.name }}">
+                            </div>
+                            <div class="col-md-8">
+                                <h2 class="mb-4">{{ product.name }}</h2>
+                                <p><b>Author: {{ product.author }}</b></p>
+                                <h5 class="fw-bold">Description:</h5><hr>
+                                <p style="color: rgb(26, 24, 24);">{{ product.description }}</p><hr>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            {% if request.user == product.author %}
+                            <a href="{% url 'sale_delete' product.pk %}" class="btn btn-danger me-2">Delete</a>
+                            <a href="{% url 'sale_update' product.pk %}" class="btn btn-primary">Update</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %} 

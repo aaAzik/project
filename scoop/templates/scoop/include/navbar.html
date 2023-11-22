@@ -1,0 +1,35 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+<nav class="navbar navbar-expand-lg  bg-transparent rounded" >
+  {% if request.user.is_authenticated %}
+  <h2 class="smooth-transition" style="color:rgb(89, 90, 30) ;">" Hello, {{request.user.first_name|default:request.user.username}} "</h2>
+  {% endif %}
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active smooth-transition loader azik-smooth" style="color: black;"  aria-current="page" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link smooth-transition azik-smooth" style="color: black;" href="{% url 'collections' %}">Posts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link smooth-transition azik-smooth" style="color: black;" href="{% url 'contact' %}">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link smooth-transition azik-smooth" style="color: black;" href="{% url 'create' %}">Create</a>
+          </li>
+          <li class="nav-item">
+            {% if request.user.is_authenticated %}
+            <a class="nav-link smooth-transition azik-smooth" style="color: black;" href="{% url 'logout' %}">Log out</a>
+            {% else %}
+            <a class="nav-link smooth-transition azik-smooth" style="color: black;" href="{% url 'login' %}">Login</a>
+            {% endif %}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

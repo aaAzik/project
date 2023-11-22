@@ -1,0 +1,16 @@
+{% extends 'scoop/layouts/base.html' %}
+{% block title %}
+Create page
+{% endblock %}
+{% block content %}
+<div class="form">
+    <form method="post" enctype="multipart/form-data">
+        <div class="upper-form">
+            <h2>Create</h2>
+            {{ form.as_p }}
+        </div>
+        {% csrf_token %}
+        <p><input type="submit" value="Create"></p>
+    </form>
+</div>
+{% endblock content %}
